@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata | Muhammad Nur Ilham</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --text-light: #ecf0f1;
+            --bg-body: #f4f7f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--primary-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--text-light);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: -50px auto 50px;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+            text-transform: uppercase;
+            font-size: 1.2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .info-item {
+            margin-bottom: 15px;
+        }
+
+        .info-item strong {
+            display: block;
+            color: var(--accent-color);
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin: 5px 3px;
+        }
+
+        .experience-item {
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MUHAMMAD NUR ILHAM</h1>
+    <p>Sarjana Muda Kejuruteraan Kimia dengan Kepujian (UKM)</p>
+</header>
+
+<div class="container">
+    
+    <div class="card">
+        <h2>Profil Profesional</h2>
+        <p>Pelajar prasiswazah yang berdedikasi dan berdisiplin di Universiti Kebangsaan Malaysia (UKM) dengan asas akademik yang kukuh (SPM 8A)[cite: 4, 27]. Mempunyai rekod prestasi yang terbukti dalam kepimpinan organisasi universiti, pengurusan teknikal, dan pembangunan sistem digital[cite: 5].</p>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <h2>Hubungi Saya</h2>
+            <div class="info-item">
+                <strong>Alamat</strong>
+                39, Jalan Vista Emas 2, Taman Vista Emas, 43000 Kajang[cite: 2].
+            </div>
+            <div class="info-item">
+                <strong>Telefon</strong>
+                +60-19 418 4759 [cite: 2]
+            </div>
+            <div class="info-item">
+                <strong>E-mel</strong>
+                nurilham0143@gmail.com [cite: 2]
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Kemahiran</h2>
+            <div>
+                <span class="skill-tag">HTML/CSS/JavaScript</span>
+                <span class="skill-tag">Google Apps Script</span>
+                <span class="skill-tag">Microsoft Office</span>
+                <span class="skill-tag">Kepimpinan</span>
+                <span class="skill-tag">Pengucapan Awam</span>
+                <span class="skill-tag">Pembangunan Sistem</span> [cite: 35, 38]
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Pengalaman & Projek Digital</h2>
+        
+        <div class="experience-item">
+            <strong>System Developer - Projek "i-Pinjam" (Mac 2026)</strong>
+            <p>Membangunkan sistem pengurusan peminjaman buku digital menggunakan HTML, CSS, dan JavaScript dengan integrasi Google Sheets sebagai pangkalan data[cite: 22, 23, 24].</p>
+        </div>
+
+        <div class="experience-item">
+            <strong>Technical Exco - CHESC-IchemE Interaction Day (2026)</strong>
+            <p>Menguruskan peralatan teknikal dan memastikan kelancaran operasi sistem audio-visual serta logistik digital[cite: 8, 10].</p>
+        </div>
+
+        <div class="experience-item">
+            <strong>Program Exco - Kelab Iqra' UKM (2025)</strong>
+            <p>Merancang modul aktiviti dan menyelaraskan aliran program untuk penglibatan komuniti pelajar[cite: 12, 14].</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Pendidikan</h2>
+        <p><strong>Universiti Kebangsaan Malaysia</strong><br>Ijazah Sarjana Muda Kejuruteraan Kimia dengan Kepujian [cite: 27]</p>
+        <p style="margin-top: 10px;"><strong>Kolej MARA Kulim</strong><br>Matrikulasi (PNGK: 3.83) [cite: 29, 30]</p>
+    </div>
+
+</div>
+
+<footer>
+    &copy; 2026 Muhammad Nur Ilham. Dibina dengan HTML & CSS.
+</footer>
+
+</body>
+</html>
