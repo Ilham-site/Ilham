@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biodata | Muhammad Nur Ilham</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
             --primary-color: #2c3e50;
-            --secondary-color: #34495e;
-            --accent-color: #3498db;
-            --text-light: #ecf0f1;
-            --bg-body: #f4f7f6;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --bg-light: #f4f7f6;
+            --text-dark: #333;
+            --white: #ffffff;
         }
 
         * {
@@ -21,45 +23,66 @@
         }
 
         body {
-            background-color: var(--bg-body);
-            color: var(--primary-color);
+            background-color: var(--bg-light);
+            color: var(--text-dark);
             line-height: 1.6;
-        }
-
-        header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: var(--text-light);
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
         }
 
         .container {
             max-width: 1000px;
-            margin: -50px auto 50px;
-            padding: 20px;
+            margin: 40px auto;
+            background: var(--white);
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 8px;
         }
 
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 20px;
             margin-bottom: 30px;
         }
 
+        header h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
         h2 {
-            border-left: 5px solid var(--accent-color);
+            color: var(--primary-color);
+            border-left: 5px solid var(--secondary-color);
             padding-left: 15px;
             margin-bottom: 20px;
-            color: var(--secondary-color);
+            font-size: 1.5rem;
             text-transform: uppercase;
-            font-size: 1.2rem;
         }
 
         .grid {
@@ -68,116 +91,171 @@
             gap: 20px;
         }
 
-        .info-item {
-            margin-bottom: 15px;
+        .card {
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
         }
 
-        .info-item strong {
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .date {
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #7f8c8d;
             display: block;
-            color: var(--accent-color);
+            margin-bottom: 10px;
         }
 
-        .skill-tag {
+        .btn-sijil {
             display: inline-block;
-            background: var(--accent-color);
+            margin-top: 15px;
+            padding: 8px 15px;
+            background-color: var(--primary-color);
             color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            transition: background 0.3s;
+        }
+
+        .btn-sijil:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .skills-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skills-list li {
+            background: #e1e8ed;
             padding: 5px 12px;
             border-radius: 20px;
             font-size: 0.9rem;
-            margin: 5px 3px;
-        }
-
-        .experience-item {
-            border-bottom: 1px solid #eee;
-            padding: 15px 0;
-        }
-
-        .experience-item:last-child {
-            border-bottom: none;
         }
 
         footer {
             text-align: center;
-            padding: 20px;
-            font-size: 0.9rem;
-            color: #7f8c8d;
+            margin-top: 50px;
+            padding-top: 20px;
+            font-size: 0.8rem;
+            color: #95a5a6;
+            border-top: 1px solid #eee;
+        }
+
+        @media (max-width: 600px) {
+            .container { margin: 10px; padding: 20px; }
+            header h1 { font-size: 1.8rem; }
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>MUHAMMAD NUR ILHAM</h1>
-    <p>Sarjana Muda Kejuruteraan Kimia dengan Kepujian (UKM)</p>
-</header>
-
 <div class="container">
-    
-    <div class="card">
-        <h2>Profil Profesional</h2>
-        <p>Pelajar prasiswazah yang berdedikasi dan berdisiplin di Universiti Kebangsaan Malaysia (UKM) dengan asas akademik yang kukuh (SPM 8A)[cite: 4, 27]. Mempunyai rekod prestasi yang terbukti dalam kepimpinan organisasi universiti, pengurusan teknikal, dan pembangunan sistem digital[cite: 5].</p>
-    </div>
-
-    <div class="grid">
-        <div class="card">
-            <h2>Hubungi Saya</h2>
-            <div class="info-item">
-                <strong>Alamat</strong>
-                39, Jalan Vista Emas 2, Taman Vista Emas, 43000 Kajang[cite: 2].
-            </div>
-            <div class="info-item">
-                <strong>Telefon</strong>
-                +60-19 418 4759 [cite: 2]
-            </div>
-            <div class="info-item">
-                <strong>E-mel</strong>
-                nurilham0143@gmail.com [cite: 2]
-            </div>
+    <header>
+        <h1>Muhammad Nur Ilham</h1>
+        <p>Pelajar Sarjana Muda Kejuruteraan Kimia (Kepujian)</p>
+        <div class="contact-info">
+            <span><i class="fas fa-envelope"></i> nurilham0143@gmail.com</span>
+            <span><i class="fas fa-phone"></i> +60-19 418 4759</span>
+            <span><i class="fas fa-map-marker-alt"></i> Kajang, Selangor</span>
         </div>
+    </header>
 
-        <div class="card">
-            <h2>Kemahiran</h2>
-            <div>
-                <span class="skill-tag">HTML/CSS/JavaScript</span>
-                <span class="skill-tag">Google Apps Script</span>
-                <span class="skill-tag">Microsoft Office</span>
-                <span class="skill-tag">Kepimpinan</span>
-                <span class="skill-tag">Pengucapan Awam</span>
-                <span class="skill-tag">Pembangunan Sistem</span> [cite: 35, 38]
-            </div>
-        </div>
-    </div>
+    <section id="ringkasan">
+        <h2>Ringkasan Profil</h2>
+        <p>Seorang pelajar prasiswazah di Universiti Kebangsaan Malaysia (UKM) yang berdedikasi dan berdisiplin dengan latar belakang akademik yang kukuh. Mempunyai rekod prestasi yang terbukti dalam kepimpinan organisasi universiti, pengurusan teknikal, dan pembangunan sistem digital.</p>
+    </section>
 
-    <div class="card">
-        <h2>Pengalaman & Projek Digital</h2>
-        
-        <div class="experience-item">
-            <strong>System Developer - Projek "i-Pinjam" (Mac 2026)</strong>
-            <p>Membangunkan sistem pengurusan peminjaman buku digital menggunakan HTML, CSS, dan JavaScript dengan integrasi Google Sheets sebagai pangkalan data[cite: 22, 23, 24].</p>
-        </div>
-
-        <div class="experience-item">
-            <strong>Technical Exco - CHESC-IchemE Interaction Day (2026)</strong>
-            <p>Menguruskan peralatan teknikal dan memastikan kelancaran operasi sistem audio-visual serta logistik digital[cite: 8, 10].</p>
-        </div>
-
-        <div class="experience-item">
-            <strong>Program Exco - Kelab Iqra' UKM (2025)</strong>
-            <p>Merancang modul aktiviti dan menyelaraskan aliran program untuk penglibatan komuniti pelajar[cite: 12, 14].</p>
-        </div>
-    </div>
-
-    <div class="card">
+    <section id="pendidikan">
         <h2>Pendidikan</h2>
-        <p><strong>Universiti Kebangsaan Malaysia</strong><br>Ijazah Sarjana Muda Kejuruteraan Kimia dengan Kepujian [cite: 27]</p>
-        <p style="margin-top: 10px;"><strong>Kolej MARA Kulim</strong><br>Matrikulasi (PNGK: 3.83) [cite: 29, 30]</p>
-    </div>
+        <div class="grid">
+            <div class="card">
+                <h3>Universiti Kebangsaan Malaysia (UKM)</h3>
+                <span class="date">Okt 2024 - Kini</span>
+                <p>Ijazah Sarjana Muda Kejuruteraan Kimia dengan Kepujian</p>
+            </div>
+            <div class="card">
+                <h3>Kolej MARA Kulim</h3>
+                <span class="date">Julai 2023 - Jun 2024</span>
+                <p>Matrikulasi Sains Hayat (PNGK: 3.83)</p>
+                <a href="A211546_MATRIKULASI.pdf" target="_blank" class="btn-sijil"><i class="fas fa-file-pdf"></i> Lihat Sijil Matrikulasi</a>
+            </div>
+            <div class="card">
+                <h3>SMK Taman Jelutong</h3>
+                <span class="date">2018 - 2022</span>
+                <p>Sijil Pelajaran Malaysia (SPM) - 8A</p>
+                <a href="A211546_SPM.pdf" target="_blank" class="btn-sijil"><i class="fas fa-file-pdf"></i> Lihat Sijil SPM</a>
+                <a href="sijil berhenti sekolah baru.pdf" target="_blank" class="btn-sijil"><i class="fas fa-file-pdf"></i> Sijil Berhenti</a>
+            </div>
+        </div>
+    </section>
 
+    <section id="pencapaian">
+        <h2>Pencapaian & Kemahiran Bahasa</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>MUET (Malaysian University English Test)</h3>
+                <p>Mencapai Tahap Band 3.5 (Sesi 3 2023)</p>
+                <a href="A211546_MUET.pdf" target="_blank" class="btn-sijil"><i class="fas fa-file-pdf"></i> Lihat Keputusan MUET</a>
+            </div>
+            <div class="card">
+                <h3>Kepimpinan Sekolah</h3>
+                <p>Biro Kebajikan & Pengawas Asrama (2022/2023)</p>
+                <a href="sijil kokurikulum baru.pdf" target="_blank" class="btn-sijil"><i class="fas fa-file-pdf"></i> Sijil Pelantikan</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projek">
+        <h2>Projek Digital & Pengalaman</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>System Developer - Project "i-Pinjam"</h3>
+                <span class="date">Mac 2026</span>
+                <p>Membangunkan sistem pengurusan pinjaman buku menggunakan HTML, CSS, JavaScript, dan Google Apps Script.</p>
+                <a href="https://i-pinjam.pages.dev/" target="_blank" class="btn-sijil"><i class="fas fa-external-link-alt"></i> Lawati Laman Projek</a>
+            </div>
+            <div class="card">
+                <h3>Informal Tutor</h3>
+                <span class="date">2022 - 2023</span>
+                <p>Membimbing pelajar SPM di SMK Taman Jelutong dalam subjek teras menggunakan teknik pengajaran kreatif.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="kemahiran">
+        <h2>Kemahiran Teknikal</h2>
+        <ul class="skills-list">
+            <li>HTML/CSS</li>
+            <li>JavaScript</li>
+            <li>Google Apps Script</li>
+            <li>Data Automation</li>
+            <li>Cloudflare Pages</li>
+            <li>Microsoft Office</li>
+            <li>Penyelesaian Masalah</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Muhammad Nur Ilham. Kod ini dijana berdasarkan dokumen rasmi.</p>
+        <a href="Ilham Resume.pdf" target="_blank" style="color: var(--secondary-color); text-decoration: none; font-weight: bold;">Muat Turun Resume Penuh (PDF)</a>
+    </footer>
 </div>
-
-<footer>
-    &copy; 2026 Muhammad Nur Ilham. Dibina dengan HTML & CSS.
-</footer>
 
 </body>
 </html>
